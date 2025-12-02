@@ -1,6 +1,6 @@
 import Wrapper from '@/components/Global/Wrapper';
 import React from 'react';
-// import banner from "../../../asset/Banner.png"
+import banner from "../../../asset/Banner.png"
 const Banner = () => {
     const statsSection = {
         heading: "Expert Business Development Solutions",
@@ -20,7 +20,7 @@ const Banner = () => {
         ],
     };
     return (
-        <div className="relative bg-[url(../../../asset/Banner.png)] bg-cover bg-center h-svh rounded-b-lg overflow-hidden">
+        <div style={{ backgroundImage: `url(${banner})` }} className="relative bg-cover bg-center h-svh rounded-b-lg overflow-hidden">
             {/* Dark overlay */}
             <div className="absolute inset-0 bg-black/50"></div>
 
