@@ -10,7 +10,7 @@ import AIPic from "../../../asset/Robotic Hand Writing.png"
 import Global from "../../../asset/Global Operations in Tech Environment.png"
 import Support from "../../../asset/Futuristic VR Explorer.png"
 import Tools from "../../../asset/Focused Work Session.png"
-import client from "../../../asset/Professional Discussion (1).png"
+import client from "../../../asset/Professional Discussion2.png"
 
 import { ArrowRight, Dot } from 'lucide-react';
 import React from 'react';
