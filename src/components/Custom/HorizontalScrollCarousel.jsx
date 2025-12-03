@@ -26,7 +26,7 @@ const HorizontalScrollCarousel = () => {
 
     return (
         <section ref={targetRef} className="relative h-[700vh] ">
-            <Wrapper className={` pt-24`}>
+            <Wrapper className={``}>
 
                 <div className="flex flex-col items-start justify-between h-[20vh] w-1/2 ">
                     <span className="flex">

@@ -38,7 +38,7 @@ const ExpertiseH = () => {
                         {expertiseSection.expertiseAreas.map((expertiseArea) => (
 
                             <div className='bg-slate-50 hover:bg-slate-200 flex items-center pl-8 text-lg font-semibold rounded-lg'>
-                                <h2>{expertiseArea}</h2>   
+                                <h2>{expertiseArea}</h2>
                             </div>
                         ))}
                     </div>

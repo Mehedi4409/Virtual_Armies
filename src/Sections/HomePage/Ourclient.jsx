@@ -25,7 +25,7 @@ const Ourclient = () => {
     ];
 
     return (
-        <div className='mt-18'>
+        <div className=''>
             <Wrapper className={`flex flex-col justify-between h-[30vh]`}>
                 <div className='h-1/3'>
                     <h3 className='flex'><Dot /> About Us</h3>
