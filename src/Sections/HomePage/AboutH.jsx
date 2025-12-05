@@ -9,14 +9,14 @@ const AboutH = () => {
 
     return (
         <div className='h-[50vh] mt-18'>
-            <Wrapper className={`flex flex-col justify-between h-full`}>
-                <div className='h-1/5'>
+            <Wrapper className={`flex flex-col justify-between gap-8 h-full`}>
+                <div className='md:h-1/5'>
                     <h3 className='flex'><DotIcon /> About Us</h3>
                 </div>
 
-                <div className='h-3/5'>
-                    <div className='flex flex-col-reverse lg:flex-row justify-between h-full '>
-                        <div className='w-1/2 flex flex-col justify-between h-full '>
+                <div className='md:h-3/5'>
+                    <div className='flex flex-col-reverse lg:flex-row justify-between h-full  gap-2'>
+                        <div className='md:w-1/2 flex flex-col justify-between h-full gap-2 '>
                             <h3 className='text-[clamp(1rem,1.2vw,1.875rem)] font-sans'>{heroText}</h3>
                             <Button variant="primary" size="lg">About Us <ArrowRight /></Button>
                         </div>

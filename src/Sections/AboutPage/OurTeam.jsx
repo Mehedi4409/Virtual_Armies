@@ -1,7 +1,7 @@
 import Wrapper from '@/components/Global/Wrapper';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Dot } from 'lucide-react';
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from "framer-motion";
 import team1 from "../../../asset/team 1.png"
 import team2 from "../../../asset/team 2.png"
@@ -59,16 +59,16 @@ const OurTeam = () => {
 
     return (
         <div>
-            <Wrapper className="flex flex-col gap-24 justify-between">
+            <Wrapper className="flex flex-col gap-12 lg:gap-24 justify-between">
                 {/* top */}
-                <div className='grid grid-cols-3 gap-4'>
+                <div className='grid lg:grid-cols-3 gap-4'>
                     <div className='flex'><Dot /> <h2>Team</h2></div>
                     <div className='space-y-4'>
                         <h1 className='text-4xl font-semibold'>{aboutContent.heading}</h1>
                     </div>
                 </div>
 
-                <div className='grid grid-cols-3 gap-4'>
+                <div className='grid  lg:grid-cols-3 gap-4'>
                     {aboutContent.teams.map((team) => (
                         <TeamCard key={team.id} team={team} />
                     ))}
@@ -81,17 +81,6 @@ const OurTeam = () => {
 export default OurTeam;
 
 
-const imageVariants = {
-    initial: {
-        scale: 0.5,
-        transition: { duration: 0.5, ease: "easeOut" } // smooth hover-out
-    },
-    hover: {
-        scale: 1,
-        transition: { duration: 0.5, ease: "easeOut" } // smooth hover-in
-    },
-    // transition: { duration: 0.5 }
-};
 
 // Optional: container variants (if needed)
 const containerVariants = {
@@ -99,33 +88,55 @@ const containerVariants = {
     hover: {}
 };
 
+const imageVariants = {
+    initial: {
+        scale: 0.5,
+        transition: { duration: 0.5, ease: "easeOut" } // smooth hover-out
+    },
+    enlarged: {
+        scale: 1,
+        transition: { duration: 0.5, ease: "easeOut" } // smooth hover-in
+    },
+
+    // transition: { duration: 0.5 }
+};
 export function TeamCard({ team }) {
+    const [isClicked, setIsClicked] = useState(false);
+
+    const handleToggle = () => {
+        setIsClicked((prev) => !prev);
+    };
     return (
         <motion.div
             variants={containerVariants}
+            onClick={handleToggle}
+            animate={isClicked ? "enlarged" : "initial"}
             initial="initial"
-            whileHover="hover"
+            whileHover="enlarged"
             className="group relative col-span-1 bg-slate-200 rounded-lg overflow-hidden aspect-square cursor-pointer"
         >
+            {/* GRADIENT OVERLAY */}
+
             <motion.img
                 src={team.img}
                 alt={team.name}
-                variants={imageVariants}  
+                variants={imageVariants}
                 // whileHover={{ scale: 1, transition: { duration: 0.5 } }} 
                 transition={{ duration: 0.5 }}
                 className="
-          absolute inset-0 w-full h-full object-cover object-center rounded-lg
-          group-hover:rounded-lg
-        "
+                absolute inset-0 z-0 w-full h-full object-cover object-center rounded-lg
+                group-hover:rounded-lg
+                "
             />
+            <GradientOverlay isActive={isClicked} />
 
             {/* Bottom Bar */}
             <div
-                className="
-          absolute bottom-0 left-0 w-full px-4 py-3
+                className={`
+          absolute bottom-0 left-0 z-20 w-full px-4 py-3
           flex items-center justify-between     
-          text-black transition-all
-        "
+    ${isClicked ? "text-white" : "text-black"} transition-all
+        `}
             >
                 <div>
                     <p className="font-semibold group-hover:text-white transition duration-500 delay-200">
@@ -137,15 +148,46 @@ export function TeamCard({ team }) {
                 </div>
 
                 <button
-                    className="
-            font-bold text-lg px-3 py-1 rounded-md 
-            bg-purple-300 transition duration-500 delay-200
+                    className={`
+            font-bold text-lg px-3 py-1 rounded-md transition duration-500
+            ${isClicked ? "bg-white text-black" : "bg-purple-300 text-black"}
             group-hover:bg-white group-hover:text-black
-          "
+          `}
                 >
                     in
                 </button>
             </div>
         </motion.div>
+    );
+}
+
+
+/* -----------------------------------
+   GRADIENT COMPONENT (SEPARATE)
+----------------------------------- */
+function GradientOverlay({ isActive }) {
+
+    const gradientVariants = {
+        hidden: {
+            opacity: 0,
+            transition: { duration: 0.4, ease: "easeOut" }
+        },
+        visible: {
+            opacity: 1,
+            transition: { duration: 0.4, ease: "easeOut" }
+        }
+    };
+    return (
+        <motion.div
+            variants={gradientVariants}
+            initial="hidden"
+            animate={isActive ? "visible" : "hidden"}
+            whileHover="visible"
+            className="
+        absolute inset-0 z-10
+        bg-gradient-to-t from-black/60 via-black/10 to-transparent
+        pointer-events-none
+      "
+        />
     );
 }

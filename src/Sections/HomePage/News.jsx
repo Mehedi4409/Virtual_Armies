@@ -51,10 +51,10 @@ const newsData = [
 const News = () => {
     return (
         <Wrapper>
-            <div className="min-h-[50vh] mt-32 space-y-24">
+            <div className="min-h-[50vh] mt-32 space-y-12 lg:space-y-24">
 
                 {/* Top Section */}
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid lg:grid-cols-3 gap-4">
                     <div className="flex items-center gap-2">
                         <Dot />
                         <h2>News</h2>
@@ -64,7 +64,7 @@ const News = () => {
                         Latest News
                     </h1>
 
-                    <div className="flex justify-end">
+                    <div className="flex lg:justify-end">
                         <Button variant="primary" size="lg">
                             More News <ArrowRight />
                         </Button>
@@ -75,7 +75,7 @@ const News = () => {
                 <Carousel>
                     <CarouselContent className="-ml-4">
                         {newsData.map((item) => (
-                            <CarouselItem key={item.id} className="basis-1/3 pl-4">
+                            <CarouselItem key={item.id} className="lg:basis-1/3 pl-4">
                                 <div className="rounded-lg overflow-hidden border border-zinc-200 dark:border-zinc-800">
                                     <img
                                         src={item.image}

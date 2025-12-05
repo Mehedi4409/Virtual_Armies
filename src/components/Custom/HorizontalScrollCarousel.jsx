@@ -25,10 +25,10 @@ const HorizontalScrollCarousel = () => {
     const x = useTransform(scrollYProgress, [0, 1], ["50%", "-40%"]);
 
     return (
-        <section ref={targetRef} className="relative h-[700vh] ">
+        <section ref={targetRef} className="relative lg:h-[600vh] space-y-24">
             <Wrapper className={``}>
 
-                <div className="flex flex-col items-start justify-between h-[20vh] w-1/2 ">
+                <div className="flex flex-col items-start justify-between h-[20vh] space-y-4 lg:w-1/2 ">
                     <span className="flex">
                         <Dot />
                         <p>About Us</p>
@@ -38,11 +38,22 @@ const HorizontalScrollCarousel = () => {
                     </span>
                 </div>
             </Wrapper>
-            <div className="sticky top-0 flex flex-col gap-24 justify-center h-screen items-center overflow-hidden">
-                <motion.div style={{ x }} className="flex gap-12 px-24">
-                    {cards.map((card) => {
-                        return <Card card={card} key={card.id} />;
-                    })}
+            {/* -------- MOBILE (Vertical Scroll) -------- */}
+            <Wrapper>
+
+                <div className="lg:hidden flex flex-col gap-4">
+                    {cards.map((card) => (
+                        <Card card={card} key={card.id} />
+                    ))}
+                </div>
+            </Wrapper>
+
+            {/* -------- DESKTOP (Horizontal Scroll) -------- */}
+            <div className="hidden lg:flex sticky top-0 justify-center items-center h-screen overflow-hidden">
+                <motion.div style={{ x }} className="flex gap-24 px-24">
+                    {cards.map((card) => (
+                        <Card card={card} key={card.id} />
+                    ))}
                 </motion.div>
             </div>
         </section>
@@ -63,16 +74,16 @@ const Card = ({ card }) => {
 
     return (
         <div
-            className="group relative h-[60vh] min-w-[50vw] overflow-hidden rounded-lg shadow-lg"
+            className="group relative h-[25vh] lg:h-[60vh] min-w-[50vw] overflow-hidden rounded-lg shadow-lg"
         >
             <div
                 style={bgStyles}
                 className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
             />
 
-            <div className="absolute inset-0 z-10 flex flex-col justify-end p-10 bg-gradient-to-t from-black/70 via-black/10 to-transparent">
-                <h2 className="text-5xl font-bold text-white">{card.title}</h2>
-                <p className="mt-4 text-lg text-white/80 max-w-xl leading-relaxed">
+            <div className="absolute inset-0 z-10 flex flex-col justify-end p-4 lg:p-10 bg-gradient-to-t from-black/70 via-black/10 to-transparent">
+                <h2 className="text-xl lg:text-5xl font-bold text-white">{card.title}</h2>
+                <p className="mt-4 text-sm lg:text-lg text-white/80 max-w-xl leading-relaxed">
                     {card.description}
                 </p>
             </div>

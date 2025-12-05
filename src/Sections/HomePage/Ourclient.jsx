@@ -25,16 +25,16 @@ const Ourclient = () => {
     ];
 
     return (
-        <div className=''>
-            <Wrapper className={`flex flex-col justify-between h-[30vh]`}>
+        <div className='space-y-12 lg:space-y-24'>
+            <Wrapper className={`flex flex-col justify-between gap-2 lg:h-[30vh]`}>
                 <div className='h-1/3'>
                     <h3 className='flex'><Dot /> About Us</h3>
                 </div>
 
                 <div>
-                    <div className='flex flex-col-reverse lg:flex-row justify-between h-full'>
-                        <h1 className='text-4xl w-1/3 font-semibold'>{aboutContent.heading}</h1>
-                        <div className='w-1/2 flex flex-col justify-between h-full space-y-4'>
+                    <div className='flex flex-col lg:flex-row justify-between gap-4 h-full'>
+                        <h1 className='text-4xl lg:w-1/3 font-semibold'>{aboutContent.heading}</h1>
+                        <div className='lg:w-1/2 flex flex-col justify-between h-full space-y-4'>
                             <h1>{aboutContent.subHeading}</h1>
                             <Button variant="primary" size="lg">
                                 About Us <ArrowRight />

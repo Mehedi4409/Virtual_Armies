@@ -72,7 +72,7 @@ const CustomContactForm = () => {
               type="button"
               onClick={() => handleChange("service", service)}
               className={cn(
-                "px-4 py-2 rounded-md border transition",
+                "text-[12px] md:text-md px-3 py-3 rounded-lg  border transition delay-150",
                 "hover:bg-gray-100 dark:hover:bg-gray-800",
                 formData.service === service
                   ? "bg-black text-white border-black dark:bg-white dark:text-black"

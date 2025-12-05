@@ -8,6 +8,7 @@ import About from "./Pages/About";
 import Services from "./Pages/Services";
 import Contact from "./Pages/Contact";
 import App from "./App";
+import Experience from "./Pages/Experience";
 
 
 // Define routes
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
       { path: "/about", element: <About /> },
       { path: "/services", element: <Services /> },
       { path: "/contact", element: <Contact /> },
+      { path: "/experience", element: <Experience /> },
     ],
   },
 ]);

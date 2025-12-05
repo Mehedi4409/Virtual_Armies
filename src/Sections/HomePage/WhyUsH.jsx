@@ -35,23 +35,23 @@ const WhyUsH = () => {
     return (
         <Wrapper>
 
-            <div className='min-h-[50vh] mt-32 space-y-24'>
+            <div className='min-h-[50vh] mt-32 space-y-12 lg:space-y-24'>
                 {/* top */}
-                <div className='grid grid-cols-3 gap-4'>
+                <div className='grid lg:grid-cols-3 gap-4'>
                     <div className='flex'><Dot /> <h2>Why Us</h2></div>
                     <div className='space-y-4'>
                         <h1 className='text-4xl font-semibold'>{aboutContent.heading}</h1>
-                        <h1>{aboutContent.subHeading}</h1>
+                        <h3  className='text-sm lg:text-md'>{aboutContent.subHeading}</h3>
                     </div>
                 </div>
 
                 {/* 3 */}
-                <div className='grid grid-cols-3 gap-4'>
+                <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
                     {aboutContent.reasons.map((reason) => (
                         <div className='space-y-2'>
                             <img className='rounded-lg' src={reason.image} alt="" />
                             <h3 className='text-2xl font-semibold'>{reason.title}</h3>
-                            <p>{reason.description}</p>
+                            <p className='text-sm lg:text-md'>{reason.description}</p>
                         </div>
                     ))}
                 </div>

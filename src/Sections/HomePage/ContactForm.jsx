@@ -19,7 +19,7 @@ const ContactForm = () => {
     <Wrapper className="mt-48 space-y-12">
 
       {/* ------ HEADER ------ */}
-      <div className="grid grid-cols-3 gap-4 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 items-start">
         <div className="flex gap-2 items-center">
           <Dot />
           <h2>Contact Us</h2>
@@ -30,24 +30,24 @@ const ContactForm = () => {
           <p>Please fill out the form or contact us using the contact details.</p>
         </div>
 
-        <div className="flex justify-end">
+        <div className="flex lg:justify-end">
           <Button variant="primary" size="lg">
-            More News <ArrowRight />
+            Contact Us <ArrowRight />
           </Button>
         </div>
       </div>
 
       {/* ------ MAIN CONTENT ------ */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 py-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 lg:gap-12 ">
 
         {/* LEFT SIDE INFO BLOCK */}
-        <div className="bg-slate-100 p-12 rounded-lg flex flex-col space-y-10">
+        <div className="w-full bg-slate-100 p-12 rounded-lg flex flex-col space-y-10">
 
           <InfoSection title="Contact Information" data={contactInfo} />
           <InfoSection title="Main Office" data={officeInfo} />
 
           <Button className="mt-auto" variant="primary" size="lg">
-            Contact Us
+            Contact Us <ArrowRight />
           </Button>
         </div>
 

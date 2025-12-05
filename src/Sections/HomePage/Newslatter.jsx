@@ -23,7 +23,7 @@ const Newslatter = () => {
             <div className="absolute inset-0 bg-black/50"></div>
 
             {/* Content */}
-            <div className="relative z-10 flex flex-col pb-24 w-1/3 justify-center gap-4 h-full text-white">
+            <div className="relative z-10 flex flex-col pb-24 w-[85%] lg:w-1/3 justify-center gap-4 h-full text-white">
                     <h2 className="text-5xl font-semibold mb-2">
                         Subscribe to our newsletter.
                     </h2>
