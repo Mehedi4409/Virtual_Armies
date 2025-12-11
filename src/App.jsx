@@ -6,7 +6,7 @@ import useLenis from "./Functions/useLenis";
 export default function App() {
   useLenis();
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen bg-slate-50/50">
       {/* Navbar stays on top */}
       <Navbar />
 

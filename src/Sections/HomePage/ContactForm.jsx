@@ -22,12 +22,12 @@ const ContactForm = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 items-start">
         <div className="flex gap-2 items-center">
           <Dot />
-          <h2>Contact Us</h2>
+          <h2 className='text-sm lg:text-lg'>Contact Us</h2>
         </div>
 
         <div className="space-y-4">
           <h1 className="text-5xl font-semibold">Do you have any Question?</h1>
-          <p>Please fill out the form or contact us using the contact details.</p>
+          <p className='text-sm md:text-lg'>Please fill out the form or contact us using the contact details.</p>
         </div>
 
         <div className="flex lg:justify-end">
@@ -38,7 +38,7 @@ const ContactForm = () => {
       </div>
 
       {/* ------ MAIN CONTENT ------ */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 lg:gap-12 ">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 lg:gap-4 ">
 
         {/* LEFT SIDE INFO BLOCK */}
         <div className="w-full bg-slate-100 p-12 rounded-lg flex flex-col space-y-10">
@@ -46,7 +46,7 @@ const ContactForm = () => {
           <InfoSection title="Contact Information" data={contactInfo} />
           <InfoSection title="Main Office" data={officeInfo} />
 
-          <Button className="mt-auto" variant="primary" size="lg">
+          <Button variant="primary" size="lg">
             Contact Us <ArrowRight />
           </Button>
         </div>

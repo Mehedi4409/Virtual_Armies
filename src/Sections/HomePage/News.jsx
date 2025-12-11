@@ -57,7 +57,7 @@ const News = () => {
                 <div className="grid lg:grid-cols-3 gap-4">
                     <div className="flex items-center gap-2">
                         <Dot />
-                        <h2>News</h2>
+                        <h2 className='text-sm lg:text-lg'>News</h2>
                     </div>
 
                     <h1 className="text-4xl font-semibold">

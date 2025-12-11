@@ -26,7 +26,7 @@ const OurServicesH = () => {
                 {/* Top Section */}
                 <div className="flex  items-center gap-2">
                     <Dot />
-                    <h2 className="text-2xl font-semibold">Our Services</h2>
+                    <h2 className='text-sm lg:text-lg'>Our Services</h2>
                 </div>
 
             </Wrapper>

@@ -11,7 +11,7 @@ const AboutH = () => {
         <div className='h-[50vh] mt-18'>
             <Wrapper className={`flex flex-col justify-between gap-8 h-full`}>
                 <div className='md:h-1/5'>
-                    <h3 className='flex'><DotIcon /> About Us</h3>
+                    <h3 className='flex text-sm lg:text-lg'><DotIcon /> About Us</h3>
                 </div>
 
                 <div className='md:h-3/5'>

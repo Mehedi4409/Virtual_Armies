@@ -10,11 +10,11 @@ const Banner = () => {
                 value: "150+",
             },
             {
-                title: "Government Contracts Supported",
+                title: "Contracts Supported",
                 value: "320+",
             },
             {
-                title: "Business Expansion Campaigns",
+                title: "Business Campaigns",
                 value: "75+",
             },
         ],

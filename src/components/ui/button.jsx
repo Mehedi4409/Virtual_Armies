@@ -13,15 +13,22 @@ const buttonVariants = cva(
         secondary:
           "bg-[#48a9a6] hover:bg-yellow-50 text-primary-foreground hover:text-black",
         white:
-          "hover:bg-[#F4F7D5] hover:text-accent-foreground dark:hover:bg-accent/50",
+          "bg-slate-100 hover:bg-[#F4F7D5] hover:text-accent-foreground dark:hover:bg-accent/50",
+        nav: "bg-[#48a9a6] text-white rounded-md",
+        navWhite: "bg-slate-100 rounded-md",
+        menu: "bg-slate-100 rounded-sm ring-1 ring-slate-300",
+        serviceOption: "ring-1 ring-slate-300 rounded-lg w-full text-left px-3 py-3 text-sm md:text-md",
+        serviceOptionActive:
+          "border-black bg-slate-600 text-white dark:text-black",
       },
       size: {
-        default: "h-9 px-4 py-2 has-[>svg]:px-3",
+        default: "h-10 px-4 py-2 has-[>svg]:px-3",
         sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
         lg: "h-12 w-32 hover:w-34 rounded-md px-6 has-[>svg]:px-4",
         icon: "size-9",
+        service: "h-12",
         "icon-sm": "size-8",
-        "icon-lg": "size-10",
+        "icon-lg": "size-12",
       },
     },
     defaultVariants: {

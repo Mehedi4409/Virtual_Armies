@@ -32,7 +32,7 @@ const CustomContactForm = () => {
   };
 
   return (
-    <div className="w-full h-full max-w-3xl mx-auto space-y-10">
+    <div className="w-full h-full max-w-3xl mx-auto space-y-9">
 
       {/* GRID FIELDS */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -65,23 +65,22 @@ const CustomContactForm = () => {
       <div className="space-y-3">
         <p className="text-sm text-gray-600">Select Service</p>
 
-        <div className="flex flex-wrap gap-3">
-          {servicesList.map((service) => (
-            <button
-              key={service}
-              type="button"
-              onClick={() => handleChange("service", service)}
-              className={cn(
-                "text-[12px] md:text-md px-3 py-3 rounded-lg  border transition delay-150",
-                "hover:bg-gray-100 dark:hover:bg-gray-800",
-                formData.service === service
-                  ? "bg-black text-white border-black dark:bg-white dark:text-black"
-                  : "border-gray-300"
-              )}
-            >
-              {service}
-            </button>
-          ))}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-2 md:gap-y-4 gap-x-2">
+          {servicesList.map((service) => {
+            const isActive = formData.service === service;
+
+            return (
+              <Button
+                key={service}
+                type="button"
+                size="service"
+                variant={isActive ? "serviceOptionActive" : "serviceOption"}
+                onClick={() => handleChange("service", service)}
+              >
+                {service}
+              </Button>
+            );
+          })}
         </div>
       </div>
 

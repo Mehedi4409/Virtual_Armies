@@ -148,7 +148,7 @@ function CarouselIndicator({
         'absolute bottom-0 z-10 flex w-full items-center justify-center',
         className
       )}>
-      <div className='flex space-x-2'>
+      <div className='flex space-x-4'>
         {Array.from({ length: itemsCount }, (_, i) => (
           <button
             key={i}

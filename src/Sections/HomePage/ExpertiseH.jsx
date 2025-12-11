@@ -24,10 +24,10 @@ const ExpertiseH = () => {
             <div className='min-h-[50vh] mt-32 space-y-12 lg:space-y-24'>
                 {/* top */}
                 <div className='grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-4'>
-                    <div className='flex'><Dot /> <h2>Our Expertise</h2></div>
+                    <div className='flex'><Dot /> <h2 className='text-sm lg:text-lg'>Our Expertise</h2></div>
                     <div className='space-y-4'>
                         <h1 className='text-4xl font-semibold'>{expertiseSection.heading}</h1>
-                        <h3 className='text-sm lg:text-md'>{expertiseSection.subHeading}</h3>
+                        <h3 className='text-sm lg:text-lg'>{expertiseSection.subHeading}</h3>
                     </div>
                 </div>
 
