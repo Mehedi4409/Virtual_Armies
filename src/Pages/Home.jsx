@@ -1,4 +1,5 @@
 import Bottom from '@/components/Global/Bottom';
+import Fotter from '@/components/Global/Fotter';
 import Navbar from '@/components/Global/Navbar';
 import { Button } from '@/components/ui/button';
 import AboutH from '@/Sections/HomePage/AboutH';
@@ -14,7 +15,7 @@ import React from 'react';
 
 const Home = () => {
     return (
-        <div className='space-y-34'>
+        <div className='space-y-34 pb-4'>
             <Banner></Banner>
             <AboutH></AboutH>
             <WhyUsH></WhyUsH>
@@ -24,7 +25,8 @@ const Home = () => {
             <News></News>
             <ContactForm></ContactForm>
             <Newslatter></Newslatter>
-            <Bottom></Bottom>
+            <Fotter></Fotter>
+            {/* <Bottom></Bottom> */}
         </div>
     );
 };

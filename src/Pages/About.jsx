@@ -5,18 +5,20 @@ import OurTeam from '@/Sections/AboutPage/OurTeam';
 import OurValues from '@/Sections/AboutPage/OurValues';
 import Newslatter from '@/Sections/HomePage/Newslatter';
 import Ourclient from '@/Sections/HomePage/Ourclient';
+import Fotter from "../components/Global/Fotter"
 import React from 'react';
 
 const About = () => {
     return (
-        <div className='space-y-24'>
+        <div className='space-y-34 pb-4'>
             <BannerA></BannerA>
             <Example></Example>
             <Ourclient></Ourclient>
             <OurTeam></OurTeam>
             <OurValues></OurValues>
             <Newslatter></Newslatter>
-            <Bottom></Bottom>
+            <Fotter></Fotter>
+            {/* <Bottom></Bottom> */}
         </div>
     );
 };

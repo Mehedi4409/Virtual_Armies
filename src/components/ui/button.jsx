@@ -19,7 +19,8 @@ const buttonVariants = cva(
         menu: "bg-slate-100 rounded-sm ring-1 ring-slate-300",
         serviceOption: "ring-1 ring-slate-300 rounded-lg w-full text-left px-3 py-3 text-sm md:text-md",
         serviceOptionActive:
-          "border-black bg-slate-600 text-white dark:text-black",
+        "border-black bg-slate-600 text-white dark:text-black",
+        fotterContactButton: "ring-1 ring-slate-300 bg-white/10 hover:bg-white/20 space-x-2 rounded-lg w-full text-left px-6 py-3 text-sm md:text-md",
       },
       size: {
         default: "h-10 px-4 py-2 has-[>svg]:px-3",
@@ -27,6 +28,7 @@ const buttonVariants = cva(
         lg: "h-12 w-32 hover:w-34 rounded-md px-6 has-[>svg]:px-4",
         icon: "size-9",
         service: "h-12",
+        fotterContactButtonSize: "h-12 w-40 hover:w-42",
         "icon-sm": "size-8",
         "icon-lg": "size-12",
       },
