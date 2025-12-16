@@ -50,7 +50,7 @@ const Ourclient = () => {
                 {/* Top Marquee */}
                 <InfiniteSlider gap={40}>
                     {companies.map((company) => (
-                        <div className='border-2 px-12 py-6 rounded-lg'>
+                        <div key={company.name} className='border-2 px-12 py-6 rounded-lg'>
                             <h1 className='font-bold text-2xl'>{company.name}</h1>
                         </div>
                     ))}
@@ -59,7 +59,7 @@ const Ourclient = () => {
                 {/* Bottom Marquee — reverse direction */}
                 <InfiniteSlider gap={40} reverse>
                     {companies.map((company) => (
-                        <div className='border-2 px-12 py-6 rounded-lg'>
+                        <div key={company.name} className='border-2 px-12 py-6 rounded-lg'>
                             <h1 className='font-bold text-2xl'>{company.name}</h1>
                         </div>
                     ))}

@@ -37,7 +37,7 @@ const ExpertiseH = () => {
                     <div className='col-span-1 grid grid-rows-7 gap-2'>
                         {expertiseSection.expertiseAreas.map((expertiseArea) => (
 
-                            <div className='bg-slate-50 hover:bg-slate-200 flex items-center py-4 px-4 text-lg font-semibold rounded-lg'>
+                            <div key={expertiseArea} className='bg-slate-50 hover:bg-slate-200 flex items-center py-4 px-4 text-lg font-semibold rounded-lg'>
                                 <h2 className=' text-sm lg:text-lg'>{expertiseArea}</h2>
                             </div>
                         ))}

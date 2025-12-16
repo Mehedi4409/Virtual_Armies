@@ -47,8 +47,8 @@ const WhyUsH = () => {
 
                 {/* 3 */}
                 <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
-                    {aboutContent.reasons.map((reason) => (
-                        <div className='space-y-2'>
+                    {aboutContent.reasons.map((reason, index) => (
+                        <div key={reason.title ?? index} className='space-y-2'>
                             <img className='rounded-lg' src={reason.image} alt="" />
                             <h3 className='text-2xl font-semibold'>{reason.title}</h3>
                             <p className='sm:text-sm md:text-lg'>{reason.description}</p>

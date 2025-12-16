@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import emailjs from "@emailjs/browser";
 
 const servicesList = [
   "Virtual Assistance",
@@ -12,7 +13,10 @@ const servicesList = [
   "Tech Support",
 ];
 
+
 const CustomContactForm = () => {
+  const [isSending, setIsSending] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -21,11 +25,53 @@ const CustomContactForm = () => {
     service: "",
     message: "",
   });
+  const submitTimeoutRef = useRef(null);
 
-  // Log the form data every time it updates
-  useEffect(() => {
-    console.log("Form Data Updated:", formData);
-  }, [formData]);
+
+  const handleSubmit = () => {
+    // Prevent clicking while sending
+    if (isSending) return;
+
+    // Clear previous debounce
+    if (submitTimeoutRef.current) {
+      clearTimeout(submitTimeoutRef.current);
+    }
+
+    submitTimeoutRef.current = setTimeout(async () => {
+      setIsSending(true);
+
+      try {
+        await emailjs.send(
+          "service_tof4ec6",
+          "template_tckcc0u",
+          {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            company: formData.company,
+            service: formData.service,
+            message: formData.message,
+          },
+          "aseyC0B_Aj1DeIHf9"
+        );
+
+        console.log("Email sent successfully");
+
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          service: "",
+          message: "",
+        });
+      } catch (error) {
+        console.error("emailjs error", error);
+      } finally {
+        setIsSending(false);
+      }
+    }, 800);
+  };
 
   const handleChange = (field, value) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -76,6 +122,7 @@ const CustomContactForm = () => {
                 size="service"
                 variant={isActive ? "serviceOptionActive" : "serviceOption"}
                 onClick={() => handleChange("service", service)}
+
               >
                 {service}
               </Button>
@@ -99,9 +146,10 @@ const CustomContactForm = () => {
         <Button
           variant="primary"
           size="lg"
-          onClick={() => console.log("Submitted:", formData)}
+          // onClick={() => console.log("Submitted:", formData)}
+          onClick={handleSubmit}
         >
-          Submit
+          {isSending ? "Sending..." : "Submit"}
         </Button>
       </div>
     </div>
