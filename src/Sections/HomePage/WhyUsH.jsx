@@ -35,23 +35,23 @@ const WhyUsH = () => {
     return (
         <Wrapper>
 
-            <div className='min-h-[50vh] mt-32 space-y-12 lg:space-y-24'>
+            <div className='min-h-[50vh] mt-14 space-y-12 lg:space-y-24'>
                 {/* top */}
                 <div className='grid lg:grid-cols-3 gap-4'>
                     <div className='flex'><Dot /> <h2 className='text-sm lg:text-lg'>Why Us</h2></div>
                     <div className='space-y-4'>
-                        <h1 className='text-4xl font-semibold'>{aboutContent.heading}</h1>
-                        <h3  className='text-sm lg:text-lg'>{aboutContent.subHeading}</h3>
+                        <h1 className='text-about-heading'>{aboutContent.heading}</h1>
+                        <h3  className='text-fluid-md text-gray-600'>{aboutContent.subHeading}</h3>
                     </div>
                 </div>
 
                 {/* 3 */}
-                <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
+                <div className='grid grid-cols-1 lg:grid-cols-3 gap-12'>
                     {aboutContent.reasons.map((reason, index) => (
-                        <div key={reason.title ?? index} className='space-y-2'>
+                        <div key={reason.title ?? index} className='space-y-4'>
                             <img className='rounded-lg' src={reason.image} alt="" />
-                            <h3 className='text-2xl font-semibold'>{reason.title}</h3>
-                            <p className='sm:text-sm md:text-lg'>{reason.description}</p>
+                            <h3 className='text-reason-title'>{reason.title}</h3>
+                            <p className='text-fluid-md text-gray-600'>{reason.description}</p>
                         </div>
                     ))}
                 </div>

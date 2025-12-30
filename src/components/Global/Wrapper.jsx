@@ -3,7 +3,7 @@ import React from 'react';
 const Wrapper = ({ children, className }) => {
   return (
     <div
-      className={`mx-auto w-[85%] md:w-[70%] max-w-full ${className ? className : ''}`}
+      className={`mx-auto w-[90%] md:w-[70%] max-w-full ${className ? className : ''}`}
     >
       {children}
     </div>

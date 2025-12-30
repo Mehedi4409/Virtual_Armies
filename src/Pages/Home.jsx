@@ -15,7 +15,7 @@ import React from 'react';
 
 const Home = () => {
     return (
-        <div className='space-y-34 pb-4'>
+        <div className='md:space-y-34 pb-4'>
             <Banner></Banner>
             <AboutH></AboutH>
             <WhyUsH></WhyUsH>

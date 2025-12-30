@@ -21,13 +21,13 @@ const ExpertiseH = () => {
     return (
         <Wrapper>
 
-            <div className='min-h-[50vh] mt-32 space-y-12 lg:space-y-24'>
+            <div className='min-h-[50vh] space-y-12 lg:space-y-24'>
                 {/* top */}
                 <div className='grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-4'>
                     <div className='flex'><Dot /> <h2 className='text-sm lg:text-lg'>Our Expertise</h2></div>
                     <div className='space-y-4'>
-                        <h1 className='text-4xl font-semibold'>{expertiseSection.heading}</h1>
-                        <h3 className='text-sm lg:text-lg'>{expertiseSection.subHeading}</h3>
+                        <h1 className='text-about-heading font-semibold'>{expertiseSection.heading}</h1>
+                        <h3 className='text-fluid-md text-gray-600'>{expertiseSection.subHeading}</h3>
                     </div>
                 </div>
 
@@ -38,7 +38,7 @@ const ExpertiseH = () => {
                         {expertiseSection.expertiseAreas.map((expertiseArea) => (
 
                             <div key={expertiseArea} className='bg-slate-50 hover:bg-slate-200 flex items-center py-4 px-4 text-lg font-semibold rounded-lg'>
-                                <h2 className=' text-sm lg:text-lg'>{expertiseArea}</h2>
+                                <h2 className='text-[clamp(0.8rem,0.8vw,1rem)]'>{expertiseArea}</h2>
                             </div>
                         ))}
                     </div>

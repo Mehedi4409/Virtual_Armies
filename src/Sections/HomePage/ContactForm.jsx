@@ -26,8 +26,8 @@ const ContactForm = () => {
         </div>
 
         <div className="space-y-4">
-          <h1 className="text-5xl font-semibold">Do you have any Question?</h1>
-          <p className='text-sm md:text-lg'>Please fill out the form or contact us using the contact details.</p>
+          <h1 className="text-about-heading">Do you have any Question?</h1>
+          <p className='text-fluid-md text-gray-600'>Please fill out the form or contact us using the contact details.</p>
         </div>
 
         <div className="flex lg:justify-end">

@@ -6,7 +6,7 @@ import { Button } from '../ui/button';
 
 const footerData = [
   {
-    title: 'Pages',
+    title: 'Company',
     links: [
       { label: 'Home', path: '/' },
       { label: 'About', path: '/about' },
@@ -19,7 +19,7 @@ const footerData = [
     title: 'Services',
     categories: [
       {
-        label: 'Business',
+        label: 'Government Contracting',
         subLinks: [
           { label: 'Virtual Training' },
           { label: 'Strategy Planning' },
@@ -27,7 +27,7 @@ const footerData = [
         ],
       },
       {
-        label: 'Government Contracting',
+        label: 'IT Services',
         subLinks: [
           { label: 'Simulations' },
           { label: 'AI Integration' },
@@ -35,7 +35,7 @@ const footerData = [
         ],
       },
       {
-        label: 'Defense',
+        label: 'Recruiting Services',
         subLinks: [
           { label: 'Tactical Training' },
           { label: 'Scenario Simulation' },
@@ -54,7 +54,7 @@ const footerData = [
 
 const Footer = () => {
   return (
-    <footer className="bg-[#48a9a6] text-white py-12 mx-4 rounded-lg -mt-30 h-[60vh]">
+    <footer className="bg-[#48a9a6] text-white py-12 mx-4 rounded-lg md:-mt-30 h-fit md:h-[60vh]">
       <Wrapper>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Logo */}
@@ -65,7 +65,7 @@ const Footer = () => {
           {/* Footer Columns */}
           {footerData.map((column) => (
             <div key={column.title}>
-              <h3 className="font-bold text-xl mb-4">{column.title}</h3>
+              <h3 className="font-bold text-[clamp(.2rem,3vw,1.2rem)] mb-4">{column.title}</h3>
 
               {/* Services with subcategories */}
               {column.categories
@@ -75,7 +75,7 @@ const Footer = () => {
                       <ul className="space-y-1 text-sm">
                         {cat.subLinks.map((link, i) => (
                           <li key={i}>{link.label}</li> // just text
-                        ))}
+                        ))} 
                       </ul>
                     </div>
                   ))

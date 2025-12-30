@@ -8,7 +8,7 @@ const AboutH = () => {
     const heroText = `Welcome to Virtual Armies, your trusted partner in business growth and operational excellence. We specialize in virtual business solutions, contracting support, and strategic expansion , delivering innovative and reliable results.`;
 
     return (
-        <div className='h-[50vh] mt-18'>
+        <div className='h-[50vh]'>
             <Wrapper className={`flex flex-col justify-between gap-8 h-full`}>
                 <div className='md:h-1/5'>
                     <h3 className='flex text-sm lg:text-lg'><DotIcon /> About Us</h3>

@@ -42,7 +42,7 @@ const Navbar = () => {
                 initial={{ y: 0 }}
                 animate={{ y: hidden ? "-100%" : "0%" }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                className={`fixed top-0 w-full z-40 py-4 ${navBgClass}`}
+                className={`fixed top-0 w-full z-40 py-12 ${navBgClass}`}
             >
                 <Wrapper>
                     <div className="flex justify-between items-center">

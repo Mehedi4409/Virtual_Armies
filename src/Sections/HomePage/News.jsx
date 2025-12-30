@@ -60,7 +60,7 @@ const News = () => {
                         <h2 className='text-sm lg:text-lg'>News</h2>
                     </div>
 
-                    <h1 className="text-4xl font-semibold">
+                    <h1 className="text-[clamp(1.9rem,3vw,2.5rem)] font-semibold">
                         Latest News
                     </h1>
 

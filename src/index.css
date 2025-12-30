@@ -140,3 +140,27 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .text-about-heading {
+    font-size: clamp(1.9rem, 3vw, 2.5rem);
+    font-weight: 600; /* font-semibold */
+  }
+
+  /* Reason title */
+  .text-reason-title {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: 600; /* font-semibold */
+  }
+  .text-fluid-sm {
+    font-size: clamp(0.5rem, 4vw, 1.2rem);
+  }
+
+  .text-fluid-md {
+    font-size: clamp(0.875rem, 3vw, 1.1rem);
+  }
+
+  .text-fluid-lg {
+    font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+  }
+}

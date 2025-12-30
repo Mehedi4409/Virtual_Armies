@@ -16,18 +16,18 @@ const Newslatter = () => {
 
     return (
         <div
-            className="relative bg-cover bg-center h-lvh overflow-hidden flex justify-center"
+            className=" rounded-lg relative bg-cover bg-center h-[70vh] md:h-lvh overflow-hidden flex  justify-center"
             style={{ backgroundImage: `url(${newsCover})` }}
         >
             {/* Dark overlay */}
             <div className="absolute inset-0 bg-black/50"></div>
 
             {/* Content */}
-            <div className="relative z-10 flex flex-col pb-24 w-[85%] lg:w-1/3 justify-center gap-4 h-full text-white">
-                    <h2 className="text-5xl font-semibold mb-2">
+            <div className="relative z-10 flex flex-col pb-24 w-[90%] lg:w-1/3 justify-center  gap-4 h-full text-white">
+                    <h2 className="text-[clamp(2rem,3vw,2.5rem)] font-semibold">
                         Subscribe to our newsletter.
                     </h2>
-                    <p className="">
+                    <p className="text-[clamp(.8rem,1.1vw,1.1rem)] text-gray-100">
                         Stay informed with industry news, product launches, and expert tips.
                     </p>
                     <form onSubmit={handleSubmit} className=" space-y-2">
